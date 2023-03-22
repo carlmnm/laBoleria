@@ -11,6 +11,6 @@ export async function postClients(req, res) {
         VALUES ($1, $2, $3);`, [name, address, phone])
         res.sendStatus(201)
     } catch (error) {
-        res.status(550).send(error.message)
+        res.status(500).send(error.message)
     }
 }

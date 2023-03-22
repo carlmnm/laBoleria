@@ -11,6 +11,6 @@ export async function postCakes(req, res) {
         VALUES ($1, $2, $3, $4);`, [name, price, description, image])
         res.sendStatus(201)
     } catch (error) {
-        res.status(550).send(error.message)
+        res.status(500).send(error.message)
     }
 }
